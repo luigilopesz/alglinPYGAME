@@ -16,7 +16,7 @@ class Draw:
     self.terra = Frames(assets['terra'].convert_alpha()).astro(25, 25, 6, (0,0,0))
     self.lua = Frames(assets['lua'].convert_alpha()).astro(25, 25, 3, (0,0,0))
     self.marte = Frames(assets['marte'].convert_alpha()).astro(25, 25, 6, (0,0,0))
-    self.jupiter = Frames(assets['jupter'].convert_alpha()).astro(25, 25, 10, (0,0,0))
+    self.jupiter = Frames(assets['jupiter'].convert_alpha()).astro(25, 25, 10, (0,0,0))
 
     self.astronauta = Frames(assets['astronauta'].convert_alpha())
     self.astronauta_list = []
