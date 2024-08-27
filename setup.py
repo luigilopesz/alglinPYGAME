@@ -12,7 +12,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "alglinPYGAME=alglinPYGAME.Main:Main",  # Se quiser criar um comando de terminal
+            "alglinPYGAME=alglinPYGAME.main:main",  # Se quiser criar um comando de terminal
         ],
     },
     author="Luigi Lopes",  # Seu nome
