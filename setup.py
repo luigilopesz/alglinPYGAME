@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="alglinPYGAME",  # Nome do pacote
     version="0.1.0",  # Versão do pacote
-    packages=find_packages(),  # Encontrar automaticamente todos os pacotes
+    packages=find_packages(include=['alglinPYGAME', 'alglinPYGAME.*']),  # Encontrar automaticamente todos os pacotes
     install_requires=[  # Dependências
         'pygame',  # Adicione dependências como pygame aqui
         'numpy',   # Adicione numpy ou outras bibliotecas que você usa
