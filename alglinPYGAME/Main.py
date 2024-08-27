@@ -1,7 +1,7 @@
 import pygame 
-from Events import *
-from Draw import *
-from Monster import *
+from alglinPYGAME.Events import *
+from alglinPYGAME.Draw import *
+from alglinPYGAME.Monster import *
 import os
 
 class Game:
