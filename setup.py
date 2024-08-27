@@ -13,7 +13,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "alglinPYGAME=alglinPYGAME.main:main",  # Certifique-se de que este caminho esteja correto
+            "alglinPYGAME=alglinPYGAME.alglinPYGAME.main:main",  # Certifique-se de que este caminho esteja correto
         ],
     },
     author="Luigi Lopes",
