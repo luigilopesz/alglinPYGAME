@@ -9,7 +9,7 @@ setup(
         'numpy',
     ],
     package_data={
-        'alglinPYGAME': ['assets/**/*.png']
+        '': ['assets/**/*.png']
     },
     entry_points={
         "console_scripts": [
