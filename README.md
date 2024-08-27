@@ -2,6 +2,12 @@
 
 jogo do Luigi 
 
+aperte enter para confirmar sua resposta.
+
+use o mouse para mirar, clique para atirar.
+
+
+
 Ao iniciar o jogo, responda a pergunta corretamente e ganhe um poder especial!!!
 
 o poder especial é um tiro teleguiado (somente 1)
