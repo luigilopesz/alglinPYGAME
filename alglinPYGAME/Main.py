@@ -1,7 +1,8 @@
 import pygame 
-from Events import *
-from Draw import *
-from Monster import *
+from alglinPYGAME.Events import *
+from alglinPYGAME.Draw import *
+from alglinPYGAME.Monster import *
+import os
 
 class Game:
   def __init__(self):
@@ -11,7 +12,7 @@ class Game:
     self.screen_larg = self.screen.get_width()
     self.screen_alt = self.screen.get_height()
     self.clock = pygame.time.Clock()
-
+    base_path = os.path.dirname(os.path.abspath(__file__))
     self.state = {
       'loop': True,
       'mouse_pos': [0,0],
@@ -54,18 +55,17 @@ class Game:
     }
 
     self.assets = {
-      'astronauta': pygame.image.load('assets\Astronaut\Astronaut_Idle.png'),
-      'alien': pygame.image.load('assets\Alien\Alien_idle.png'),
-      'diamante': pygame.image.load('assets\Other sprites\Diamond.png'),
-      'terra': pygame.image.load('assets\AssetJam\Earth.png'),
-      'lua': pygame.image.load('assets\AssetJam\Moon.png'),
-      'grav_lua': pygame.draw.circle(self.screen, (255, 255, 255), (self.state['terra']['pos'][0] + self.state['lua']['pos'][0] + 37.5, self.state['terra']['pos'][1] + self.state['lua']['pos'][1] + 37.5), 130, width=4),
-      'marte': pygame.image.load('assets\AssetJam\Mars.png'),
-      'jupter': pygame.image.load('assets\AssetJam\Jupiter.png'),
-      'bg': pygame.image.load('assets\AssetJam\BackGround.png'),
-      'tiro': pygame.image.load('assets\Astronaut\Tiro.png'),
-      'teleguiado': pygame.image.load('assets\Astronaut\Tiro2.png')
-    }
+            'astronauta': pygame.image.load(os.path.join(base_path, 'assets', 'Astronaut', 'Astronaut_Idle.png')),
+            'alien': pygame.image.load(os.path.join(base_path, 'assets', 'Alien', 'Alien_idle.png')),
+            'diamante': pygame.image.load(os.path.join(base_path, 'assets', 'Other sprites', 'Diamond.png')),
+            'terra': pygame.image.load(os.path.join(base_path, 'assets', 'AssetJam', 'Earth.png')),
+            'lua': pygame.image.load(os.path.join(base_path, 'assets', 'AssetJam', 'Moon.png')),
+            'marte': pygame.image.load(os.path.join(base_path, 'assets', 'AssetJam', 'Mars.png')),
+            'jupiter': pygame.image.load(os.path.join(base_path, 'assets', 'AssetJam', 'Jupiter.png')),
+            'bg': pygame.image.load(os.path.join(base_path, 'assets', 'AssetJam', 'BackGround.png')),
+            'tiro': pygame.image.load(os.path.join(base_path, 'assets', 'Astronaut', 'Tiro.png')),
+            'teleguiado': pygame.image.load(os.path.join(base_path, 'assets', 'Astronaut', 'Tiro2.png'))
+        }
 
   def game_loop(self):
 
@@ -84,6 +84,14 @@ class Game:
 
       self.state['dia'] += 1
 
-run = Game()
+def main():
+    game = Game()
+    try:
+        game.game_loop()
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+    finally:
+        pygame.quit()
 
-run.game_loop()
+if __name__ == "__main__":
+  main()
