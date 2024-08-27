@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="alglinPYGAME",
     version="0.1.0",
-    packages=find_packages(),  # Encontrar automaticamente todos os pacotes
+    packages=find_packages(include=['alglinPYGAME', 'alglinPYGAME.*']),  # Encontrar automaticamente todos os pacotes
     install_requires=[
         'pygame',
         'numpy',
@@ -13,7 +13,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "alglinPYGAME=alglinPYGAME.main:main",  # Certifique-se de que este caminho esteja correto
+            "alglinPYGAME=alglinPYGAME.alglinPYGAME.main:main",  # Certifique-se de que este caminho esteja correto
         ],
     },
     author="Luigi Lopes",
