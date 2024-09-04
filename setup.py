@@ -13,7 +13,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "alglin_pygame=alglinPYGAME.main:main",  # Certifique-se de que este caminho esteja correto
+            "alglin_pygame=alglin_pygame.main:main",  # Certifique-se de que este caminho esteja correto
         ],
     },
     author="Luigi Lopes",
