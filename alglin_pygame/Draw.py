@@ -1,6 +1,6 @@
 import pygame
-from alglinPYGAME.Frames import *
-from alglinPYGAME.Fisics import *
+from alglin_pygame.Frames import *
+from alglin_pygame.Fisics import *
 
 class Draw:
   def __init__(self, screen, assets, state, stats):

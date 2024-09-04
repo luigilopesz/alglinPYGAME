@@ -1,5 +1,5 @@
 import pygame
-from alglinPYGAME.Fisics import *
+from alglin_pygame.Fisics import *
 import sys
 
 class Events:
